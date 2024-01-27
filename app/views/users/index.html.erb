@@ -1,8 +1,4 @@
-<html>
-  <head>
-    <title>All Users</title>
-  </head>
-  <body>
-    <h1>Here is a list of USERS</h1>
-  </body>
-</html>
+<h2>Users</h2>
+<% @users.each do |user| %>
+  <%= render 'shared/user_header', user: user %>
+<% end %>

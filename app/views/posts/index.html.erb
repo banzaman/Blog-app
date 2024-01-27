@@ -1,8 +1,10 @@
-<html>
-  <head>
-    <title>All Posts</title>
-  </head>
-  <body>
-    <h1>Here is a list of POSTS for a given user</h1>
-  </body>
-</html>
+<%= render 'shared/user_header', user: @user %>
+
+<% @posts.each do |post| %>
+  <%= render 'shared/post_card', post: post %>
+  <div class="comments-box">
+    <% post.recent_comments.each do |comment| %>
+      <%= render 'shared/comments_card', comment: comment %>
+    <% end %>
+  </div>
+<% end %>
