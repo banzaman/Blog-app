@@ -1,8 +1,13 @@
-<html>
-  <head>
-    <title>User</title>
-  </head>
-  <body>
-    <h1>Here is a specific USER</h1>
-  </body>
-</html>
+<%= render 'shared/user_header', user: @user %>
+
+  <div class="user-bio">
+    <h3>Bio</h3>
+    <%= @user.bio%>
+  </div>
+
+  <% recent_posts = @user.last_three_posts %>
+  <% recent_posts.each do |post| %>
+    <%= render 'shared/post_card', user: @user, post: post %>
+  <% end %>
+
+<%= link_to "See all posts", user_posts_path(@user) %>
