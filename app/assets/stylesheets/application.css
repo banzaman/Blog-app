@@ -66,3 +66,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+.form {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}

@@ -11,3 +11,14 @@
     <%= render 'shared/comments_card', comment: comment %>
   <% end %>
 </div>
+
+<%= notice %>
+<%= alert %>
+
+<%= form_with(model: @like, url: post_likes_create_path(current_user.id, @post.id), method: :post) do |form| %>
+  <%= form.hidden_field :author_id, value: current_user.id %>
+  <%= form.hidden_field :post_id, value: @post.id %>
+  <%= form.submit 'Like' %>
+<% end %>
+
+<%= render 'shared/comments_form', current_user: @current_user, post: @post %>
