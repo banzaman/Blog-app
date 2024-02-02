@@ -1,5 +1,7 @@
 <div class="post-card">
-  <p>Post #<%= post.id %></p>
+  <%= link_to post_comments_path(@user, post, format: '') do %>
+    <p>Post #<%= post.id %></p>
+  <% end %>
   <p class="post-text"><%= post.text %></p>
   <div class="post-stats">
     <p>Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>

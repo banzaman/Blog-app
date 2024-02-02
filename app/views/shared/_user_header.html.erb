@@ -1,7 +1,9 @@
-<div class ="user-card">
+<div class="user-card">
   <img src="<%= user.photo %>">
   <div class="user-overview">
-    <h3><%= user.name %></h3>
+    <%= link_to user_path(user, format: '') do %>
+      <h3><%= user.name %></h3>
+    <% end %>
     <p>Number of posts: <%= user.post_counter %></p>
   </div>
 </div>
