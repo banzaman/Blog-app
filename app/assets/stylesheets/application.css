@@ -93,4 +93,5 @@ body {
 .btn-logout {
   position: absolute;
   right: 15px;
+  width: 100%;
 }
