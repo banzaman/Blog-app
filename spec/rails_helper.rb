@@ -63,3 +63,5 @@ RSpec.configure do |config|
 end
 
 require 'rails-controller-testing'
+
+Capybara.default_driver = :selenium_chrome
