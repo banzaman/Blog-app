@@ -94,3 +94,7 @@ body {
   position: absolute;
   right: 15px;
 }
+
+.action {
+  width: 100%;
+}
