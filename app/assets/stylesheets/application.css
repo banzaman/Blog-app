@@ -72,3 +72,29 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.login-form {
+  width: 400px;
+  margin: auto;
+}
+
+.login-form .field input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  padding: 2.5px;
+}
+
+.login-form .actions input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.btn-logout {
+  position: absolute;
+  right: 15px;
+}
+
+.action {
+  width: 100%;
+}
